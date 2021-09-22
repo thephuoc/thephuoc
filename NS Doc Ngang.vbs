@@ -47,6 +47,7 @@ a2 = ar.Cells(i - 1, j) + (ar.Cells(i, j) - ar.Cells(i - 1, j)) * (x - ar.Cells(
 'noi suy 1 chieu theo cot tu 2 gia tri a1 va a2 o tren
 NS2C = a1 + (a2 - a1) * (y - ar.Cells(1, j - 1)) / (ar.Cells(1, j) - ar.Cells(1, j - 1))
 End Function
+
 Function NS_NGANG(ar As Range, x As Double, n As Byte)
 Dim j As Integer
 If ar.Cells(1, 2) > ar.Cells(1, 1) Then
