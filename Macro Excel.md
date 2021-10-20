@@ -25,23 +25,13 @@ You can click the Preview link to take a look at your changes.
 
 =DATE(2021,2,RANDBETWEEN(1,14))
 
-
-
-
-
-
-
-
-
-
-
 Sub Valuu()
 '
 ' Valuu Macro
 '
-
 '
-    Range("A3").Select
+'
+Range("A3").Select
     Range(Selection, Selection.End(xlDown)).Select
     ActiveWindow.SmallScroll Down:=-21
     Selection.Copy
