@@ -1,0 +1,20 @@
+<Configuration>
+    <Add OfficeClientEdition="64" Channel="Insiders" AllowCdnFallback="TRUE" ForceUpgrade="TRUE">
+        <Product ID="O365ProPlusRetail">
+            <Language ID="en-us"/>
+            <ExcludeApp ID="Access"/>
+            <ExcludeApp ID="Groove"/>
+            <ExcludeApp ID="Lync"/>
+            <ExcludeApp ID="OneNote"/>
+            <ExcludeApp ID="Publisher"/>
+        </Product>
+    </Add>
+    <Display Level="Full" AcceptEULA="TRUE"/>
+    <Property Name="AUTOACTIVATE" Value="1"/>
+    <Property Name="FORCEAPPSHUTDOWN" Value="TRUE"/>
+    <Property Name="SharedComputerLicensing" Value="0"/>
+    <Property Name="PinIconsToTaskbar" Value="TRUE"/>
+    <Updates Enabled="TRUE" />
+    <Property Name="SCLCacheOverride" Value="0"/>
+    <RemoveMSI All="TRUE"/>
+</Configuration>
