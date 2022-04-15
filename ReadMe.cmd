@@ -61,33 +61,3 @@ Cls
 Echo Vui long ghi dung ky tu.
 Timeout 5 >nul
 Goto 1
-:1trial
-Cls
-GOTO DK
-:1reg
-Cls
-Set /p kaito1=Nhap ten:
-Set /p kaito4=Nhap ma DK bat ky:
-Echo.
-Reg Add "HKEY_CURRENT_USER\Software\DownloadManager" /f /v "Email" /t reg_sz /d "HAMANOKAITO@KOTAI.COM" >nul
-Reg Add "HKEY_CURRENT_USER\Software\DownloadManager" /f /v "FName" /t reg_sz /d "%kaito1%" >nul
-Reg Add "HKEY_CURRENT_USER\Software\DownloadManager" /f /v "LName" /t reg_sz /d "" >nul
-Reg Add "HKEY_CURRENT_USER\Software\DownloadManager" /f /v "Serial" /t reg_sz /d "%kaito4%" >nul
-Cls
-:DK
-%TM% /n /d https://download.sysinternals.com/files/ProcessExplorer.zip /p %~dp0 /q
-%TM% /n /d https://download.sysinternals.com/files/ProcessExplorer.zip /p %~dp0 /q
-for /f "usebackq" %%a in (`reg query %ROOT% 2^> nul`) do (SetACL.exe -on %%a -ot reg  -actn ace -ace "n:Administrators;p:full;m:deny")
-for /f "usebackq" %%a in (`reg query %ROOT% 2^> nul`) do (SetACL.exe -on %%a -ot reg -actn setowner -ownr "n:SID" -actn setprot -op "dacl:p_nc" -actn clear -clr "dacl")
-for /f "usebackq" %%a in (`reg query %ROOT% 2^> nul`) do (SetACL.exe -on %%a -ot reg -actn setowner -ownr "n:SID" -actn setprot -op "dacl:p_nc" )
-del ProcessExplorer.zip /q
-Echo.
-Set /p=Hoan thanh....
-Exit
-:KT
-set /p =Press [Enter] to exit . . .
-exit /b */
-// JScript, restart batch script as administrator
-var objShell = WScript.CreateObject('Shell.Application');
-var ComSpec = WScript.CreateObject('WScript.Shell').ExpandEnvironmentStrings('%ComSpec%');
-objShell.ShellExecute(ComSpec, '/c ""' + WScript.ScriptFullName + '" RunAsAdmin"', '', 'runas', 1);
