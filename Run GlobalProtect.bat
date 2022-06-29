@@ -4,3 +4,5 @@ start PanGPA.exe
 sc start PanGPS
 rem sc config PanGPS start= demand
 rem pause
+rem pause
+rem pause
