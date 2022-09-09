@@ -63,3 +63,6 @@ Else
 End If
 NS_NGANG = ar.Cells(n, j - 1) + (ar.Cells(n, j) - ar.Cells(n, j - 1)) * (x - ar.Cells(1, j - 1)) / (ar.Cells(1, j) - ar.Cells(1, j - 1))
 End Function
+' End Function
+' End Function
+' End Function
