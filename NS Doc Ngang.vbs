@@ -65,4 +65,3 @@ NS_NGANG = ar.Cells(n, j - 1) + (ar.Cells(n, j) - ar.Cells(n, j - 1)) * (x - ar.
 End Function
 ' End Function
 ' End Function
-' End Function
